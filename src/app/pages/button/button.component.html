@@ -1,1 +1,5 @@
-<button (click)="onClick()">{{ text$ | async }}</button>
+<button (click)="onClick()"
+  (keydown)="onKeyDown()" (mousedown)="onKeyDown()"
+  (keyup)="onKeyUp()" (mouseup)="onKeyUp()" (mouseleave)="onKeyUp()"
+  [ngClass]="keyDownClass"
+>{{ text$ | async }}</button>

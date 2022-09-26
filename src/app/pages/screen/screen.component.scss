@@ -1,11 +1,14 @@
 section {
-  width: 720px;
   height: 48px;
-  background-color: #DDCCAA;
+  border: 5px solid;
+  border-radius: 6px;
+  margin: 10px;
+  background-color: #B4C0B0;
+  color: #1f271f;
+  font-size: 42px;
+  padding: 4px 6px;
+  text-align: right;
+  font-family: Lato;
 
-  div {
-    font-size: 42px;
-    text-align: right;
-    padding: 4px 8px;
-  }
+  border-color: #185669 #8ce7ee #8ce7ee #185669;
 }

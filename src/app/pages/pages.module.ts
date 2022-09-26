@@ -14,6 +14,7 @@ import { BackspaceButtonComponent } from './button/backspace-button-component';
 import { UnaryOperatorButtonComponent } from './button/unary-operator-button-component';
 import { MemoryOperatorButtonComponent } from './button/memory-operator-button-component';
 import { MemoryRecallButtonComponent } from './button/memory-recall-button-component';
+import { BrandComponent } from './brand/brand.component';
 
 const buttonComponents = [
   PowerButtonComponent,
@@ -34,7 +35,8 @@ const buttonComponents = [
     ButtonComponent,
     ...buttonComponents,
     ControlPanelComponent,
-    DebugViewComponent
+    DebugViewComponent,
+    BrandComponent,
   ],
   imports: [
     CommonModule
@@ -42,7 +44,8 @@ const buttonComponents = [
   exports: [
     ScreenComponent, 
     ControlPanelComponent,
-    DebugViewComponent
+    DebugViewComponent,
+    BrandComponent,
   ]
 })
 export class PagesModule { }

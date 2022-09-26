@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { selectFsmState, selectMemory, selectOperand, selectOperand1, selectOperand2, selectOperator, selectResult } from 'src/app/state/calculator.selectors';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-debug-view',
@@ -8,6 +9,8 @@ import { selectFsmState, selectMemory, selectOperand, selectOperand1, selectOper
   styleUrls: ['./debug-view.component.scss']
 })
 export class DebugViewComponent implements OnInit {
+
+  isDevTest = !environment.production;
 
   state$ = this.store.select(selectFsmState);
   op$ = this.store.select(selectOperand);

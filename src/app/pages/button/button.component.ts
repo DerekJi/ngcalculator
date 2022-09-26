@@ -9,7 +9,12 @@ import { Observable, of } from 'rxjs';
 })
 export class ButtonComponent implements OnInit {
   @Input() text: string = '';
-  @Input() type: string = 'NUMBER';
+  protected type: string = '';
+  protected keyDown: boolean = false;
+
+  get keyDownClass(): string { 
+    return this.keyDown ? 'btn-down' : '';
+  }
 
   get text$(): Observable<string> {
     return of(this.text);
@@ -23,5 +28,12 @@ export class ButtonComponent implements OnInit {
   onClick(): void {
   }
 
+  onKeyDown(): void {
+    this.keyDown = true;
+  }
+
+  onKeyUp(): void {
+    this.keyDown = false;
+  }
 }
 

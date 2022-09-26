@@ -1,60 +1,44 @@
 <section class="ctrl-panel">
   
-  <div>
-    <label class="">BACKSPACE: </label>
+  <div class="row">
+    <app-power-button></app-power-button>
+    <app-memory-operator-button text="M+"></app-memory-operator-button>
+    <app-memory-operator-button text="M-"></app-memory-operator-button>
+    <app-memory-recall-button text="MR" title="Memroy Recall"></app-memory-recall-button>
     <app-backspace-button></app-backspace-button>
   </div>
 
-  <div>
-    <label class="">NUMBER: </label>
-    <ng-container *ngFor="let num of [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]">
+  <div class="row">
+    <app-unary-operator-button text="%"></app-unary-operator-button>
+    <ng-container *ngFor="let num of [7, 8, 9]">
       <app-number-button [text]="num.toString()"></app-number-button>
     </ng-container>
+    <app-binary-operator-button text="÷"></app-binary-operator-button>
   </div>
 
-  <div>
-    <label class="">POINT: </label>
-    <app-point-button></app-point-button>
-  </div>
-
-  <div>
-    <label class="">Unary Operator: </label>
-    <app-unary-operator-button text="%"></app-unary-operator-button>
-    <app-unary-operator-button text="√"></app-unary-operator-button>
+  <div class="row">
     <app-unary-operator-button text="±"></app-unary-operator-button>
+    <ng-container *ngFor="let num of [4, 5, 6]">
+      <app-number-button [text]="num.toString()"></app-number-button>
+    </ng-container>
+    <app-binary-operator-button text="×"></app-binary-operator-button>
   </div>
 
-  <div>
-    <label class="">Binary Operator: </label>
-    <app-binary-operator-button text="+"></app-binary-operator-button>
-    <app-binary-operator-button text="-"></app-binary-operator-button>
-    <app-binary-operator-button text="*"></app-binary-operator-button>
-    <app-binary-operator-button text="/"></app-binary-operator-button>
-  </div>
-
-  <div>
-    <label class="">Memory Operator: </label>
-    <app-memory-operator-button text="MC"></app-memory-operator-button>
-    <app-memory-operator-button text="M+"></app-memory-operator-button>
-    <app-memory-operator-button text="M-"></app-memory-operator-button>
-    <app-memory-operator-button text="MS"></app-memory-operator-button>
-    <app-memory-recall-button text="M" title="Memroy Recall"></app-memory-recall-button>
-    <app-memory-recall-button text="MR" title="Memroy Recall"></app-memory-recall-button>
-  </div>
-
-  <div>
-    <label class="">EQUAL: </label>
-    <app-equal-button></app-equal-button>
-  </div>
-
-  <div>
-    <label class="">RESET: </label>
+  <div class="row">
     <app-reset-button text="C"></app-reset-button>
-    <app-reset-button text="CE"></app-reset-button>
+    <ng-container *ngFor="let num of [1, 2, 3]">
+      <app-number-button [text]="num.toString()"></app-number-button>
+    </ng-container>
+    <app-binary-operator-button text="-"></app-binary-operator-button>
   </div>
 
-  <div>
-    <label class="">POWER: </label>
-    <app-power-button></app-power-button>
+  <div class="row">
+    <app-reset-button text="CE"></app-reset-button>
+    <ng-container *ngFor="let num of [0]">
+      <app-number-button [text]="num.toString()"></app-number-button>
+    </ng-container>
+    <app-point-button></app-point-button>
+    <app-equal-button></app-equal-button>
+    <app-binary-operator-button text="+"></app-binary-operator-button>
   </div>
 </section>

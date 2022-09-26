@@ -1,24 +1,8 @@
-button {
-  margin: 8px;
-  width: 42px;
-  height: 18px;
-  border-radius: 6px;
-  border: 1px solid gray;
-
-  &.btn-wide {
-    width: 64px !important;
-  }
-  
-  &:hover {
-    background-color: azure;
-  }
+section {
+  margin-top: 24px;
 }
 
-label {
-  display: inline-block;
-  width: 120px;
-}
-
-div {
-  margin-bottom: 8px;
+div.row {
+  display: flex;
+  justify-content: space-around;
 }

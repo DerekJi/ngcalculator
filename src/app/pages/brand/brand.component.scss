@@ -1,0 +1,27 @@
+section {
+  height: 20px;
+  width: 95%;
+  display: flex;
+  justify-items: baseline;
+  justify-content: space-between;
+  margin: 8px;
+
+  .brand {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    color: beige;
+  }
+
+  .model {
+    font-size: 0.8em;
+    color: gray;
+    font-size: 12px;
+  }
+}
+
+div.author {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 10px;
+  font-style: italic;
+}
