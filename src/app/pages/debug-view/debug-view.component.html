@@ -1,0 +1,35 @@
+<section>
+  <h2>DEBUG VIEW</h2>
+
+  <hr/>
+  <div>
+    <label>State: </label>
+    <span>{{ state$ | async }}</span>
+  </div>
+  <hr/>
+  <div>
+    <label>Operand: </label>
+    <span>{{ op$ | async }}</span>
+  </div>
+  <div>
+    <label>Memory: </label>
+    <span>{{ memory$ | async }}</span>
+  </div>
+  <div>
+    <label>Result: </label>
+    <span>{{ result$ | async }}</span>
+  </div>
+  <hr/>
+  <div>
+    <label>Operand 1: </label>
+    <span>{{ op1$ | async }}</span>
+  </div>
+  <div>
+    <label>Operator: </label>
+    <span>{{ oper$ | async }}</span>
+  </div>
+  <div>
+    <label>Operand 2: </label>
+    <span>{{ op2$ | async }}</span>
+  </div>
+</section>

@@ -1,0 +1,15 @@
+button {
+  margin: 8px;
+  width: 42px;
+  height: 18px;
+  border-radius: 6px;
+  border: 1px solid gray;
+
+  &.btn-wide {
+    width: 64px;
+  }
+  
+  &:hover {
+    background-color: azure;
+  }
+}
