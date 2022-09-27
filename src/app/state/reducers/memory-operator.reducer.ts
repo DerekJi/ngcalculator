@@ -11,10 +11,15 @@ export function onMemoryOperatorReducer(calcState: CalcState, { oper }: { oper: 
       case FsmState.OnOp1Result:
       case FsmState.OnStart:
       case FsmState.OnOperator:
-      case FsmState.OnResult:
         return Object.assign({}, calcState, {
           state: FsmState.OnOp1Result,
           memory: memoryOperate(calcState.memory, calcState.operand1, oper),
+        });
+
+      case FsmState.OnResult:
+        return Object.assign({}, calcState, {
+          state: FsmState.OnOp1Result,
+          memory: memoryOperate(calcState.memory, calcState.result, oper),
         });
       
       case FsmState.OnOp2:
