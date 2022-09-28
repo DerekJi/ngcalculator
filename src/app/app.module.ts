@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { StoreModule } from '@ngrx/store';
 import { PagesModule } from './pages/pages.module';
 import { calculatorReducer } from './state/calculator.reducers';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -13,7 +15,8 @@ import { calculatorReducer } from './state/calculator.reducers';
   imports: [
     BrowserModule,
     PagesModule,
-    StoreModule.forRoot({ calc: calculatorReducer })
+    StoreModule.forRoot({ calc: calculatorReducer }),
+    StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]
