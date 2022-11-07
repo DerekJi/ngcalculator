@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { ScreenComponent } from './screen/screen.component';
 import { ButtonComponent } from './button/button.component';
 import { ControlPanelComponent } from './control-panel/control-panel.component';
-import { DebugViewComponent } from './debug-view/debug-view.component';
 import { PowerButtonComponent } from './button/power-button-component';
 import { NumberButtonComponent } from './button/number-button-component';
 import { PointButtonComponent } from './button/point-button-component';
@@ -35,7 +34,6 @@ const buttonComponents = [
     ButtonComponent,
     ...buttonComponents,
     ControlPanelComponent,
-    DebugViewComponent,
     BrandComponent,
   ],
   imports: [
@@ -44,7 +42,6 @@ const buttonComponents = [
   exports: [
     ScreenComponent, 
     ControlPanelComponent,
-    DebugViewComponent,
     BrandComponent,
   ]
 })
