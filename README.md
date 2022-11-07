@@ -23,6 +23,9 @@
    * OnMemory: Memory
 
 ## High-Level Calculation FSM
+
+> You probably need [Markdown Diagrams](https://chrome.google.com/webstore/detail/markdown-diagrams/pmoglnmodacnbbofbgcagndelmgaclel) to view the diagrams
+
 ```plantuml
 @startuml
 
@@ -39,9 +42,14 @@ Operand_2: Zero, Integer, Float
 Operand_2 --> End: EQ
 End: Result, Error, Memory
 End  --> [*]: Power
+
+@enduml
 ```
 
 ## Keys
+
+> You probably need [Markdown Diagrams](https://chrome.google.com/webstore/detail/markdown-diagrams/pmoglnmodacnbbofbgcagndelmgaclel) to view the diagrams
+
 ```plantuml
 @startuml
 
@@ -62,6 +70,8 @@ Keys: **EQ** for Equals (=)
 
 ## Special Event: Power
 
+> You probably need [Markdown Diagrams](https://chrome.google.com/webstore/detail/markdown-diagrams/pmoglnmodacnbbofbgcagndelmgaclel) to view the diagrams
+
 ```plantuml
 @startuml
 
@@ -81,6 +91,8 @@ Start -[#red]-> [*]: Power
 ```
 
 ## Special Event: Reset
+
+> You probably need [Markdown Diagrams](https://chrome.google.com/webstore/detail/markdown-diagrams/pmoglnmodacnbbofbgcagndelmgaclel) to view the diagrams
 
 ```plantuml
 @startuml
@@ -103,6 +115,8 @@ End -[#brown]-> Start: RESET
 
 
 ## Special Event: Memory Recall
+
+> You probably need [Markdown Diagrams](https://chrome.google.com/webstore/detail/markdown-diagrams/pmoglnmodacnbbofbgcagndelmgaclel) to view the diagrams
 
 ```plantuml
 @startuml
@@ -133,6 +147,9 @@ Result -[#brown,dashed]-> Memory: MR
 ```
 
 ## Detailed Calculation FSM
+
+> You probably need [Markdown Diagrams](https://chrome.google.com/webstore/detail/markdown-diagrams/pmoglnmodacnbbofbgcagndelmgaclel) to view the diagrams
+
 ```plantuml
 @startuml
 hide empty description
