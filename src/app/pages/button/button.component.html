@@ -1,5 +1,5 @@
-<button (click)="onClick()"
-  (keydown)="onKeyDown()" (mousedown)="onKeyDown()"
-  (keyup)="onKeyUp()" (mouseup)="onKeyUp()" (mouseleave)="onKeyUp()"
+<span class="btn" (click)="onClick()"
+  (pointerdown)="onKeyDown()" 
+  (pointerup)="onKeyUp()" (pointerleave)="onKeyUp()"
   [ngClass]="keyDownClass"
->{{ text$ | async }}</button>
+>{{ text$ | async }}</span>

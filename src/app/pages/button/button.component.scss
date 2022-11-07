@@ -1,15 +1,17 @@
-button {
+.btn {
   display: inline-block;
   border: 1px solid gainsboro;
   border-radius: 8px;
   position: relative;
   width: 42px;
-  height: 32px;
+  height: 28px;
   margin: 6px;
   box-shadow: 1px 1px 1px rgb(0 0 0 / 20%);
   background: #d2d4d0;
   font-size: 1.2em;
   font-weight: bold;
+  
+  padding-top: 2px;
 
   &:before,
   &:after {
