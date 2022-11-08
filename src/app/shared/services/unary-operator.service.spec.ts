@@ -1,6 +1,5 @@
 import { TestBed } from '@angular/core/testing';
 import { UnaryCalcOperator } from '../models/unary-operator.type';
-
 import { UnaryOperatorService } from './unary-operator.service';
 
 describe('UnaryOperatorService', () => {

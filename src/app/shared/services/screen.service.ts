@@ -13,10 +13,10 @@ export class ScreenService {
       return '';
     }
   
-    if (operand.toLowerCase() === 'ERROR'.toLocaleLowerCase()) return operand;
+    if (operand.toLowerCase().includes('ERROR'.toLocaleLowerCase())) return operand;
   
     var v = parseFloat(operand);
-    if (v.toString().length < maxLength) {
+    if (v.toString().length <= maxLength) {
       var display = v.toString();
       if (operand[operand.length - 1] === '.') {
         display = display + '.';
