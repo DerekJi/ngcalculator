@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { PowerAction } from 'src/app/state/calculator.actions';
 
@@ -7,11 +7,8 @@ import { PowerAction } from 'src/app/state/calculator.actions';
   templateUrl: './control-panel.component.html',
   styleUrls: ['./control-panel.component.scss']
 })
-export class ControlPanelComponent implements OnInit {
+export class ControlPanelComponent {
   constructor(private store: Store) { }
-
-  ngOnInit(): void {
-  }
 
   power(): void {
     this.store.dispatch(PowerAction());

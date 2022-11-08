@@ -1,4 +1,4 @@
-import { Component, Input } from "@angular/core";
+import { Component } from "@angular/core";
 import { Store } from "@ngrx/store";
 import { UnaryCalcOperator } from "src/app/models/unary-operator.type";
 import { UnaryOperatorAction } from "src/app/state/calculator.actions";
@@ -10,7 +10,7 @@ import { ButtonComponent } from "./button.component";
   styleUrls: ['./button.component.scss']
 })
 export class UnaryOperatorButtonComponent extends ButtonComponent {
-  @Input() override type: string = 'UNARY_OPERATOR';
+  override type: string = 'UNARY_OPERATOR';
   constructor(protected override store: Store) { super(store); }
   
   override onClick(): void {

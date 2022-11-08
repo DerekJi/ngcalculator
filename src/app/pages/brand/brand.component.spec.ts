@@ -19,5 +19,10 @@ describe('BrandComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+
+    expect(component.brand).toBe('Calculator');
+    expect(component.model).toContain('ng14');
+    expect(component.model).toContain('NgRX');
+    expect(component.author).toContain('Zhigang Ji');
   });
 });

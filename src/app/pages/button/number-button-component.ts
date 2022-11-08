@@ -1,4 +1,4 @@
-import { Component, Input } from "@angular/core";
+import { Component } from "@angular/core";
 import { Store } from "@ngrx/store";
 import { NumberAction } from "src/app/state/calculator.actions";
 import { ButtonComponent } from "./button.component";
@@ -9,7 +9,7 @@ import { ButtonComponent } from "./button.component";
   styleUrls: ['./button.component.scss']
 })
 export class NumberButtonComponent extends ButtonComponent {
-  @Input() override type: string = 'NUMBER';
+  override type: string = 'NUMBER';
   constructor(protected override store: Store) { super(store); }
   
   override onClick(): void {
