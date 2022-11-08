@@ -1,8 +1,10 @@
 import { BinaryCalcOperator } from "src/app/shared/models/binary-operator.type";
 import { CalcState } from "src/app/shared/models/calc-state.model";
 import { FsmState } from "src/app/shared/models/fsm-state.enum";
+import { OperandService } from "../../services/operand.service";
 import { initialState } from "../calculator.reducers";
-import { calculate } from "../operand.helper";
+
+const operandService = new OperandService();
 
 export function onBinaryOperatorReducer(calcState: CalcState, { oper }: { oper: BinaryCalcOperator }): CalcState {
   try {
@@ -33,7 +35,7 @@ export function onBinaryOperatorReducer(calcState: CalcState, { oper }: { oper: 
       case FsmState.OnOp2Result:
         return Object.assign({}, calcState, {
           state: FsmState.OnOperator,
-          operand1: calculate(calcState.operand1, calcState.operand2, calcState.operator),
+          operand1: operandService.calculate(calcState.operand1, calcState.operand2, calcState.operator),
           operator: oper,
           operand2: initialState.operand2
         });

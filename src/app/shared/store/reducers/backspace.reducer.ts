@@ -1,20 +1,21 @@
 import { CalcState } from "src/app/shared/models/calc-state.model";
 import { FsmState } from "src/app/shared/models/fsm-state.enum";
-import { initialState } from "../calculator.reducers";
-import { backspace, calculate } from "../operand.helper";
+import { OperandService } from "../../services/operand.service";
+
+const operandService = new OperandService();
 
 export function onBackspaceReducer(calcState: CalcState): CalcState {
   switch (calcState.state) {
     case FsmState.OnOp1:
       return Object.assign({}, calcState, {
         state: FsmState.OnOp1,
-        operand1: backspace(calcState.operand1),
+        operand1: operandService.backspace(calcState.operand1),
       });
 
     case FsmState.OnOp2:
       return Object.assign({}, calcState, {
         state: FsmState.OnOp2,
-        operand2: backspace(calcState.operand2),
+        operand2: operandService.backspace(calcState.operand2),
       });
 
     case FsmState.OnOperator:

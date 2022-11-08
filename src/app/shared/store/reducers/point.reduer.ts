@@ -1,7 +1,9 @@
 import { CalcState } from "src/app/shared/models/calc-state.model";
 import { FsmState } from "src/app/shared/models/fsm-state.enum";
+import { OperandService } from "../../services/operand.service";
 import { initialState } from "../calculator.reducers";
-import { appendPoint } from "../operand.helper";
+
+const operandService = new OperandService();
 
 export function onPointReducer(calcState: CalcState): CalcState {
   switch (calcState.state) {
@@ -16,12 +18,12 @@ export function onPointReducer(calcState: CalcState): CalcState {
 
     case FsmState.OnOp1:
       return Object.assign({}, calcState, {
-        operand1: appendPoint(calcState.operand1),
+        operand1: operandService.appendPoint(calcState.operand1),
       });
       
     case FsmState.OnOp2:
       return Object.assign({}, calcState, {
-        operand2: appendPoint(calcState.operand2),
+        operand2: operandService.appendPoint(calcState.operand2),
       });
 
     case FsmState.OnOperator:
