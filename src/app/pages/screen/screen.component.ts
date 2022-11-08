@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { map } from 'rxjs';
 import { configuration } from 'src/app/app.configuration';
-import { selectOperand } from 'src/app/state/calculator.selectors';
-import { toDisplay } from 'src/app/state/operand.helper';
+import { selectOperand } from 'src/app/shared/store/calculator.selectors';
+import { toDisplay } from 'src/app/shared/store/operand.helper';
 
 @Component({
   selector: 'app-screen',

@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
 import { Store } from "@ngrx/store";
-import { NumberAction } from "src/app/state/calculator.actions";
+import { NumberAction } from "src/app/shared/store/calculator.actions";
 import { ButtonComponent } from "./button.component";
 
 @Component({

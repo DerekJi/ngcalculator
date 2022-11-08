@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { provideMockStore } from '@ngrx/store/testing';
-import { initialState } from 'src/app/state/calculator.reducers';
+import { initialState } from 'src/app/shared/store/calculator.reducers';
 
 import { ButtonComponent } from './button.component';
 

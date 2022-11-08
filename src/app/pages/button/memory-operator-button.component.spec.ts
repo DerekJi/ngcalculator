@@ -1,10 +1,10 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Store } from '@ngrx/store';
 import { MockStore, provideMockStore } from '@ngrx/store/testing';
-import { MemoryOperatorAction } from 'src/app/state/calculator.actions';
-import { initialState } from 'src/app/state/calculator.reducers';
+import { MemoryOperatorAction } from 'src/app/shared/store/calculator.actions';
+import { initialState } from 'src/app/shared/store/calculator.reducers';
 import { MemoryOperatorButtonComponent } from './memory-operator-button-component';
-import { MemoryOperator } from "src/app/models/memory-operator.type";
+import { MemoryOperator } from "src/app/shared/models/memory-operator.type";
 
 describe('MemoryOperatorButtonComponent', () => {
   let component: MemoryOperatorButtonComponent;

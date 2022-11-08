@@ -1,6 +1,6 @@
-import { UnaryCalcOperator } from "src/app/models/unary-operator.type";
-import { CalcState } from "src/app/models/calc-state.model";
-import { FsmState } from "src/app/models/fsm-state.enum";
+import { UnaryCalcOperator } from "src/app/shared/models/unary-operator.type";
+import { CalcState } from "src/app/shared/models/calc-state.model";
+import { FsmState } from "src/app/shared/models/fsm-state.enum";
 import { unaryOperate } from "../unary-operator.helper";
 
 export function onUnaryOperatorReducer(calcState: CalcState, { oper }: { oper: UnaryCalcOperator }): CalcState {

@@ -1,5 +1,5 @@
-import { CalcState } from "src/app/models/calc-state.model";
-import { FsmState } from "src/app/models/fsm-state.enum";
+import { CalcState } from "src/app/shared/models/calc-state.model";
+import { FsmState } from "src/app/shared/models/fsm-state.enum";
 import { initialState } from "../calculator.reducers";
 import { appendNumber } from "../operand.helper";
 
