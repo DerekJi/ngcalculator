@@ -1,7 +1,7 @@
 import { MemoryOperator } from "src/app/shared/models/memory-operator.type";
 import { CalcState } from "src/app/shared/models/calc-state.model";
 import { FsmState } from "src/app/shared/models/fsm-state.enum";
-import { memoryOperate } from "../memory-operator.helper";
+import { memoryOperate } from "../../helpers/memory-operator.helper";
 import { patch } from "../../helpers/immutable.helper";
 
 export function onMemoryOperatorReducer(calcState: CalcState, { oper }: { oper: MemoryOperator }): CalcState {
