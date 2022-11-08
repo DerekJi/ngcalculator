@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, Output } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable, of } from 'rxjs';
 
@@ -7,7 +7,7 @@ import { Observable, of } from 'rxjs';
   templateUrl: './button.component.html',
   styleUrls: ['./button.component.scss']
 })
-export class ButtonComponent implements OnInit {
+export class ButtonComponent {
   @Input() text: string = '';
   protected type: string = '';
   protected keyDown: boolean = false;
@@ -22,18 +22,10 @@ export class ButtonComponent implements OnInit {
 
   constructor(protected store: Store) { }
 
-  ngOnInit(): void {
-  }
+  onClick(): void { }
 
-  onClick(): void {
-  }
+  onKeyDown(): void { this.keyDown = true; }
 
-  onKeyDown(): void {
-    this.keyDown = true;
-  }
-
-  onKeyUp(): void {
-    this.keyDown = false;
-  }
+  onKeyUp(): void { this.keyDown = false; }
 }
 
