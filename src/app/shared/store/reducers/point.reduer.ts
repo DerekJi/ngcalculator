@@ -1,5 +1,6 @@
 import { CalcState } from "src/app/shared/models/calc-state.model";
 import { FsmState } from "src/app/shared/models/fsm-state.enum";
+import { patch } from "../../helpers/immutable.helper";
 import { OperandService } from "../../services/operand.service";
 import { initialState } from "../calculator.reducers";
 
@@ -10,24 +11,24 @@ export function onPointReducer(calcState: CalcState): CalcState {
     case FsmState.OnError:
     case FsmState.OnResult:
     case FsmState.OnStart:
-      return Object.assign({}, initialState, {
+      return patch(initialState, {
         state: FsmState.OnOp1,
         operand1: '0.',
         memory: calcState.memory,
       });
 
     case FsmState.OnOp1:
-      return Object.assign({}, calcState, {
+      return patch(calcState, {
         operand1: operandService.appendPoint(calcState.operand1),
       });
       
     case FsmState.OnOp2:
-      return Object.assign({}, calcState, {
+      return patch(calcState, {
         operand2: operandService.appendPoint(calcState.operand2),
       });
 
     case FsmState.OnOperator:
-      return Object.assign({}, calcState, {
+      return patch(calcState, {
         state: FsmState.OnOp2,
         operand2: "0.",
       });
@@ -35,6 +36,6 @@ export function onPointReducer(calcState: CalcState): CalcState {
     case FsmState.OnOp1Result:
     case FsmState.OnOp2Result:
     case FsmState.PoweredOff:
-      return Object.assign({}, calcState);
+      return { ...calcState };
   }
 }
