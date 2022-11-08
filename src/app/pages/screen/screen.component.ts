@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { map } from 'rxjs';
+import { configuration } from 'src/app/app.configuration';
 import { selectOperand } from 'src/app/state/calculator.selectors';
 import { toDisplay } from 'src/app/state/operand.helper';
 
@@ -9,16 +10,12 @@ import { toDisplay } from 'src/app/state/operand.helper';
   templateUrl: './screen.component.html',
   styleUrls: ['./screen.component.scss']
 })
-export class ScreenComponent implements OnInit {
+export class ScreenComponent {
 
   value$ = this.store.select(selectOperand)
             .pipe(
-              map((value) => toDisplay(value, 12)),
+              map((value) => toDisplay(value, configuration.SCREEN_LENDTH)),
             );
 
   constructor(private store: Store) { }
-
-  ngOnInit(): void {
-  }
-
 }
