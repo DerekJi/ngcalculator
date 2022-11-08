@@ -1,4 +1,4 @@
-import { Component, Input } from "@angular/core";
+import { Component } from "@angular/core";
 import { Store } from "@ngrx/store";
 import { PointAction } from "src/app/state/calculator.actions";
 import { ButtonComponent } from "./button.component";
@@ -9,8 +9,8 @@ import { ButtonComponent } from "./button.component";
   styleUrls: ['./button.component.scss']
 })
 export class PointButtonComponent extends ButtonComponent {
-  @Input() override text: string = '.';
-  @Input() override type: string = 'POINT';
+  override text: string = '.';
+  override type: string = 'POINT';
   constructor(protected override store: Store) { super(store); }
   
   override onClick(): void {

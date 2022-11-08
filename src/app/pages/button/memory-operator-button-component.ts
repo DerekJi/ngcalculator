@@ -1,4 +1,4 @@
-import { Component, Input } from "@angular/core";
+import { Component } from "@angular/core";
 import { Store } from "@ngrx/store";
 import { MemoryOperator } from "src/app/models/memory-operator.type";
 import { MemoryOperatorAction } from "src/app/state/calculator.actions";
@@ -10,7 +10,7 @@ import { ButtonComponent } from "./button.component";
   styleUrls: ['./button.component.scss']
 })
 export class MemoryOperatorButtonComponent extends ButtonComponent {
-  @Input() override type: string = 'MEMORY_OPERATOR';
+  override type: string = 'MEMORY_OPERATOR';
   constructor(protected override store: Store) { super(store); }
   
   override onClick(): void {
