@@ -1,11 +1,13 @@
-name: DevOps
+name: Pull Request
 on:
-  push:
+  pull_request:
     branches:
       - master
-
+      - 'feature/**'
+      - 'bugfix/**'
+      
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
@@ -20,9 +22,3 @@ jobs:
 
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v1
-
-    - name: Deploy
-      uses: JamesIves/github-pages-deploy-action@4.1.5
-      with:
-        branch: gh-pages
-        folder: dist
