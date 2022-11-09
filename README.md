@@ -1,5 +1,8 @@
 # Finite State Machine for Calculator
 
+[![DevOps](https://github.com/DerekJi/ngtetris/actions/workflows/deploy.yml/badge.svg)](https://github.com/DerekJi/ngtetris/actions/workflows/deploy.yml)
+[![codecov](https://codecov.io/gh/DerekJi/ngcalculator/branch/master/graph/badge.svg?token=B7F794N97T)](https://codecov.io/gh/DerekJi/ngcalculator)
+
 ## States
 
 * State

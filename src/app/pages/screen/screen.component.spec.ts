@@ -2,8 +2,8 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Store } from '@ngrx/store';
 import { MockStore, provideMockStore } from '@ngrx/store/testing';
 import { configuration } from 'src/app/app.configuration';
-import { initialState } from 'src/app/state/calculator.reducers';
-import { selectOperand } from 'src/app/state/calculator.selectors';
+import { initialState } from 'src/app/shared/store/calculator.reducers';
+import { selectOperand } from 'src/app/shared/store/calculator.selectors';
 
 import { ScreenComponent } from './screen.component';
 

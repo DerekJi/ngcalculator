@@ -1,10 +1,10 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Store } from '@ngrx/store';
 import { MockStore, provideMockStore } from '@ngrx/store/testing';
-import { BinaryOperatorAction } from 'src/app/state/calculator.actions';
-import { initialState } from 'src/app/state/calculator.reducers';
+import { BinaryOperatorAction } from 'src/app/shared/store/calculator.actions';
+import { initialState } from 'src/app/shared/store/calculator.reducers';
 import { BinaryOperatorButtonComponent } from './binary-operator-button-component';
-import { BinaryCalcOperator } from "src/app/models/binary-operator.type";
+import { BinaryCalcOperator } from "src/app/shared/models/binary-operator.type";
 
 describe('BinaryOperatorButtonComponent', () => {
   let component: BinaryOperatorButtonComponent;

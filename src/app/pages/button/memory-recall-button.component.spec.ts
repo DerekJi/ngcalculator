@@ -1,8 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Store } from '@ngrx/store';
 import { MockStore, provideMockStore } from '@ngrx/store/testing';
-import { MemoryRecallAction } from 'src/app/state/calculator.actions';
-import { initialState } from 'src/app/state/calculator.reducers';
+import { MemoryRecallAction } from 'src/app/shared/store/calculator.actions';
+import { initialState } from 'src/app/shared/store/calculator.reducers';
 import { MemoryRecallButtonComponent } from './memory-recall-button-component';
 
 describe('MemoryRecallButtonComponent', () => {

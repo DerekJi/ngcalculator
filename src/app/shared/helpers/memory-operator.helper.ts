@@ -1,12 +1,14 @@
 import { MemoryOperator } from "../models/memory-operator.type";
-import { calculate } from "./operand.helper";
+import { OperandService } from "../services/operand.service";
+
+const operandService = new OperandService();
 
 export function memoryOperate(memory: string, operand: string, oper: MemoryOperator): string {
   switch (oper) {
     case 'M+':
-      return calculate(memory, operand, '+');
+      return operandService.calculate(memory, operand, '+');
     case 'M-':
-      return calculate(memory, operand, '-');
+      return operandService.calculate(memory, operand, '-');
     case 'MC':
       return '0';
     case 'MS':

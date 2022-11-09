@@ -2,9 +2,9 @@ import { Component } from "@angular/core";
 import { Store } from "@ngrx/store";
 import { map, Observable } from "rxjs";
 import { configuration } from "src/app/app.configuration";
-import { FsmState } from "src/app/models/fsm-state.enum";
-import { PowerAction } from "src/app/state/calculator.actions";
-import { selectFsmState } from "src/app/state/calculator.selectors";
+import { FsmState } from "src/app/shared/models/fsm-state.enum";
+import { PowerAction } from "src/app/shared/store/calculator.actions";
+import { selectFsmState } from "src/app/shared/store/calculator.selectors";
 import { ButtonComponent } from "./button.component";
 
 @Component({

@@ -1,7 +1,7 @@
 import { Component } from "@angular/core";
 import { Store } from "@ngrx/store";
-import { ResetType } from "src/app/models/reset-type.enum";
-import { ResetAction } from "src/app/state/calculator.actions";
+import { ResetType } from "src/app/shared/models/reset-type.enum";
+import { ResetAction } from "src/app/shared/store/calculator.actions";
 import { ButtonComponent } from "./button.component";
 
 @Component({

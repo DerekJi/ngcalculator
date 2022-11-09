@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { PowerAction } from 'src/app/state/calculator.actions';
+import { PowerAction } from 'src/app/shared/store/calculator.actions';
 
 @Component({
   selector: 'app-control-panel',

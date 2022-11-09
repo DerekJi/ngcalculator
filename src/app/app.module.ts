@@ -4,9 +4,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { StoreModule } from '@ngrx/store';
 import { PagesModule } from './pages/pages.module';
-import { calculatorReducer } from './state/calculator.reducers';
+import { calculatorReducer } from './shared/store/calculator.reducers';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { environment } from '../environments/environment';
   imports: [
     BrowserModule,
     PagesModule,
+    SharedModule,
     StoreModule.forRoot({ calc: calculatorReducer }),
     StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: environment.production })
   ],

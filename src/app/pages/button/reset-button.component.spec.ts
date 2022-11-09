@@ -1,9 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Store } from '@ngrx/store';
 import { MockStore, provideMockStore } from '@ngrx/store/testing';
-import { ResetType } from 'src/app/models/reset-type.enum';
-import { ResetAction } from 'src/app/state/calculator.actions';
-import { initialState } from 'src/app/state/calculator.reducers';
+import { ResetType } from 'src/app/shared/models/reset-type.enum';
+import { ResetAction } from 'src/app/shared/store/calculator.actions';
+import { initialState } from 'src/app/shared/store/calculator.reducers';
 import { ResetButtonComponent } from './reset-button-component';
 
 describe('ResetButtonComponent', () => {

@@ -1,7 +1,7 @@
 import { Component } from "@angular/core";
 import { Store } from "@ngrx/store";
-import { UnaryCalcOperator } from "src/app/models/unary-operator.type";
-import { UnaryOperatorAction } from "src/app/state/calculator.actions";
+import { UnaryCalcOperator } from "src/app/shared/models/unary-operator.type";
+import { UnaryOperatorAction } from "src/app/shared/store/calculator.actions";
 import { ButtonComponent } from "./button.component";
 
 @Component({

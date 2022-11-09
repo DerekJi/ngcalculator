@@ -2,10 +2,10 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Store } from '@ngrx/store';
 import { MockStore, provideMockStore } from '@ngrx/store/testing';
 import { configuration } from 'src/app/app.configuration';
-import { FsmState } from 'src/app/models/fsm-state.enum';
-import { PowerAction } from 'src/app/state/calculator.actions';
-import { initialState } from 'src/app/state/calculator.reducers';
-import { selectFsmState } from 'src/app/state/calculator.selectors';
+import { FsmState } from 'src/app/shared/models/fsm-state.enum';
+import { PowerAction } from 'src/app/shared/store/calculator.actions';
+import { initialState } from 'src/app/shared/store/calculator.reducers';
+import { selectFsmState } from 'src/app/shared/store/calculator.selectors';
 import { PowerButtonComponent } from './power-button-component';
 
 describe('PowerButtonComponent', () => {

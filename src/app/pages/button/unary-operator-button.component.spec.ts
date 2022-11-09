@@ -1,10 +1,10 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Store } from '@ngrx/store';
 import { MockStore, provideMockStore } from '@ngrx/store/testing';
-import { UnaryOperatorAction } from 'src/app/state/calculator.actions';
-import { initialState } from 'src/app/state/calculator.reducers';
+import { UnaryOperatorAction } from 'src/app/shared/store/calculator.actions';
+import { initialState } from 'src/app/shared/store/calculator.reducers';
 import { UnaryOperatorButtonComponent } from './unary-operator-button-component';
-import { UnaryCalcOperator } from "src/app/models/unary-operator.type";
+import { UnaryCalcOperator } from "src/app/shared/models/unary-operator.type";
 
 describe('UnaryOperatorButtonComponent', () => {
   let component: UnaryOperatorButtonComponent;

@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
 import { Store } from "@ngrx/store";
-import { MemoryRecallAction } from "src/app/state/calculator.actions";
+import { MemoryRecallAction } from "src/app/shared/store/calculator.actions";
 import { ButtonComponent } from "./button.component";
 
 @Component({
