@@ -10,4 +10,3 @@ export function onResetReduer(state: CalcState, { resetType }: { resetType: Rese
     memory: resetType === ResetType.C ? state.memory : initialState.memory,
   });
 }
-    

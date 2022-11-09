@@ -20,13 +20,13 @@ export function onBinaryOperatorReducer(calcState: CalcState, { oper }: { oper: 
           operand2: initialState.operand2
         });
     
-        case FsmState.OnResult:
-          return patch(calcState, {
-            state: FsmState.OnOperator,
-            operand1: calcState.result,
-            operator: oper,
-            operand2: initialState.operand2
-          });
+      case FsmState.OnResult:
+        return patch(calcState, {
+          state: FsmState.OnOperator,
+          operand1: calcState.result,
+          operator: oper,
+          operand2: initialState.operand2
+        });
   
       case FsmState.OnError:
       case FsmState.PoweredOff:
